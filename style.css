@@ -94,6 +94,19 @@ body {
   gap: 2rem;
 }
 
+/* Mobile nav toggle */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--light-slate);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.nav-toggle:focus { outline: none; }
+
+.nav-links.open { display: flex; }
+
 .nav-links a {
   text-decoration: none;
   color: var(--light-slate);
@@ -201,6 +214,42 @@ section.active .section-title-highlight::after {
 .hero-feature { display: flex; align-items: center; gap: 10px; color: var(--lightest-slate); }
 .btn-primary { display: inline-flex; align-items: center; gap: 10px; background: var(--blue-bright); color: var(--white); padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: var(--transition); }
 .hero-img-wrapper img { width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+
+/* General responsive improvements */
+@media (max-width: 1024px) {
+  .hero-layout { gap: 2rem; max-width: 1100px; }
+  .nav-toggle { display: block; }
+  .nav-links { display: none; }
+  .nav-links.open { display: flex; position: absolute; top: 80px; right: 0; left: 0; background: rgba(1,4,9,0.95); flex-direction: column; gap: 0; padding: 1rem 2rem; z-index: 1500; }
+  .nav-links.open li { border-bottom: 1px solid rgba(255,255,255,0.03); }
+  .nav-links.open a { display: block; padding: 1rem 0; }
+}
+
+@media (max-width: 900px) {
+  .about-main-content, .hero-layout { flex-direction: column; align-items: center; }
+  .about-main-content { gap: 2rem; }
+}
+
+@media (max-width: 600px) {
+  .hero-title-main { font-size: clamp(28px, 6vw, 40px); }
+  .hero-features-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .btn-primary { width: 100%; justify-content: center; }
+  .hero-img-wrapper { width: 100%; max-height: 320px; overflow: hidden; }
+  .hero-img-wrapper img { object-fit: cover; height: 100%; }
+  .services-grid-premium, .tech-grid-premium { grid-template-columns: 1fr; }
+  .team-grid-premium { grid-template-columns: repeat(2, 1fr); }
+  .specialize-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  section { padding: 80px 1rem 3rem; }
+  .logo-text { font-size: 1.1rem; }
+  .nav-container { padding: 0 1rem; }
+  .hero-title-main { font-size: 2rem; }
+  .hero-subtext { font-size: 1rem; }
+  .project-img-box { height: 150px; }
+  .team-grid-premium { grid-template-columns: 1fr; }
+}
 
 /* About Section */
 .about-main-content { display: flex; gap: 4rem; width: 100%; max-width: 1200px; margin-bottom: 4rem; }
