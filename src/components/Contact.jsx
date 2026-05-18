@@ -48,23 +48,23 @@ const Contact = () => {
           <h2 className="contact-cta">Let's Build <br /><span className="blue-text">Together</span></h2>
           <p className="contact-desc">Reach out to us and let's create something great! We're ready to bring your vision to life.</p>
           
-          <div className="contact-item-box glass-card" onClick={() => window.location.href='mailto:contact@novatech.niat'}>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=punithdata@gmail.com" target="_blank" rel="noreferrer" className="contact-item-box glass-card">
             <div className="item-icon"><i className="fas fa-envelope"></i></div>
             <div className="item-text">
               <strong>Email</strong>
-              <span>contact@novatech.niat</span>
+              <span>punithdata@gmail.com</span>
             </div>
             <i className="fas fa-external-link-alt click-icon"></i>
-          </div>
+          </a>
           
-          <div className="contact-item-box glass-card" onClick={() => window.location.href='tel:+911234567890'}>
+          <a href="https://wa.me/919676318048" target="_blank" rel="noreferrer" className="contact-item-box glass-card">
             <div className="item-icon"><i className="fas fa-phone"></i></div>
             <div className="item-text">
               <strong>Phone</strong>
-              <span>+91 12345 67890</span>
+              <span>+91 9676318048</span>
             </div>
             <i className="fas fa-external-link-alt click-icon"></i>
-          </div>
+          </a>
         </div>
 
         {/* Column 2: Form */}
@@ -103,7 +103,7 @@ const Contact = () => {
               <i className="fab fa-github"></i>
               <span>GitHub</span>
             </a>
-            <a href="https://linkedin.com/company/novatech-solutions" target="_blank" rel="noreferrer" className="social-card-item">
+            <a href="https://linkedin.com/in/punith-reddy-gangireddy" target="_blank" rel="noreferrer" className="social-card-item">
               <i className="fab fa-linkedin"></i>
               <span>LinkedIn</span>
             </a>
