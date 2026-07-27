@@ -30,19 +30,24 @@ const Contact = () => {
       });
 
       const data = await response.json();
-
       setIsSubmitting(false);
 
-      if (response.ok && data.success !== 'false') {
+      if (data.success === 'true' || data.success === true) {
         setFeedback({
           type: 'success',
           message: 'Success! Your message has been sent directly to punithdata@gmail.com. We will contact you shortly.'
         });
         form.reset();
+      } else if (data.message && data.message.toLowerCase().includes('activation')) {
+        setFeedback({
+          type: 'info',
+          message: 'Form Activation Email Sent! FormSubmit sent an activation link to punithdata@gmail.com. Please click "Activate Form" in your email inbox to complete setup.'
+        });
+        form.reset();
       } else {
         setFeedback({
           type: 'error',
-          message: 'Oops! Something went wrong while sending your message. Please try again or email us directly.'
+          message: data.message || 'Oops! Something went wrong while sending your message. Please try again or email us directly.'
         });
       }
     } catch (err) {

@@ -321,6 +321,7 @@ section.active .section-title-highlight::after {
 
 .form-feedback { margin-top: 1.5rem; padding: 1rem; border-radius: 8px; font-size: 0.9rem; display: none; text-align: center; }
 .form-feedback.success { background: rgba(100, 255, 218, 0.1); color: #64ffda; border: 1px solid rgba(100, 255, 218, 0.2); display: block; }
+.form-feedback.info { background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); display: block; }
 .form-feedback.error { background: rgba(255, 100, 100, 0.1); color: #ff6464; border: 1px solid rgba(255, 100, 100, 0.2); display: block; }
 
 .contact-socials-side { display: flex; flex-direction: column; gap: 1.5rem; text-align: left; }
