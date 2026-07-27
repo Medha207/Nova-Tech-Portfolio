@@ -4,35 +4,59 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [feedback, setFeedback] = useState({ type: '', message: '' });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setFeedback({ type: '', message: '' });
 
-    // Simulate API Request
-    setTimeout(() => {
-      const isSuccess = Math.random() > 0.1; // 90% success rate for simulation
+    const form = e.target;
+    const formData = new FormData(form);
+    const formObject = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message'),
+      _subject: 'New Contact Inquiry — Digital Ninjas',
+      _captcha: 'false'
+    };
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/punithdata@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(formObject)
+      });
+
+      const data = await response.json();
 
       setIsSubmitting(false);
 
-      if (isSuccess) {
+      if (response.ok && data.success !== 'false') {
         setFeedback({
           type: 'success',
-          message: 'Success! Your message has been sent. We will contact you shortly.'
+          message: 'Success! Your message has been sent directly to punithdata@gmail.com. We will contact you shortly.'
         });
-        e.target.reset();
+        form.reset();
       } else {
         setFeedback({
           type: 'error',
-          message: 'Oops! Something went wrong. Please try again later.'
+          message: 'Oops! Something went wrong while sending your message. Please try again or email us directly.'
         });
       }
+    } catch (err) {
+      setIsSubmitting(false);
+      setFeedback({
+        type: 'error',
+        message: 'Network error. Please try again later or email us directly at punithdata@gmail.com.'
+      });
+    }
 
-      // Auto-hide feedback
-      setTimeout(() => {
-        setFeedback({ type: '', message: '' });
-      }, 6000);
-    }, 2000);
+    // Auto-hide feedback
+    setTimeout(() => {
+      setFeedback({ type: '', message: '' });
+    }, 7000);
   };
 
   return (
