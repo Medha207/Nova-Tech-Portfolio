@@ -30,24 +30,6 @@ const teamMembers = [
     tech: ["Python", "TensorFlow", "OpenAI", "ML"]
   },
   {
-    name: "Lakshmi Priya M.",
-    role: "FRONTEND DEVELOPER",
-    theme: "purple",
-    isLead: false,
-    img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop",
-    desc: "Specializes in building responsive, pixel-perfect React interfaces with a strong eye for design and performance.",
-    tech: ["React", "Tailwind CSS", "JavaScript", "HTML"]
-  },
-  {
-    name: "Namani Yashwanth",
-    role: "BACKEND DEVELOPER",
-    theme: "blue",
-    isLead: false,
-    img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
-    desc: "Develops robust backend systems and APIs, ensuring performance, security and reliability at scale.",
-    tech: ["Node.js", "Express.js", "MongoDB", "REST API"]
-  },
-  {
     name: "Punith Reddy G.",
     role: "DATABASE ENGINEER",
     theme: "purple",
@@ -88,7 +70,7 @@ const Team = () => {
         <div className="text-center mb-16">
           <span className="block text-[#3b82f6] text-sm font-bold tracking-[4px] uppercase mb-4">Meet Our Team</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
-            The Minds Behind <span className="text-[#3b82f6]">NovaTech</span>
+            The Minds Behind <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent">Digital Ninjas</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-sm md:text-base">
             A passionate team of student innovators and developers building smart digital solutions for real businesses.
@@ -96,7 +78,7 @@ const Team = () => {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           {teamMembers.map((member, index) => {
             const isBlue = member.theme === 'blue';

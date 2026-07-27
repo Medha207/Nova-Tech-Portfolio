@@ -18,7 +18,7 @@ const About = () => {
         </div>
         <div className="about-stats-right">
           <div className="innovators-card glass-card">
-            <div className="stat-main"><i className="fas fa-users"></i><span className="stat-num">7</span></div>
+            <div className="stat-main"><i className="fas fa-users"></i><span className="stat-num">5</span></div>
             <div className="stat-info" style={{ display: 'flex', flexDirection: 'column' }}>
               <strong>Passionate Innovators</strong>
               <span>One Goal: Real Impact</span>

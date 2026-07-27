@@ -14,7 +14,9 @@ const Hero = () => {
       <div className="hero-layout">
         <div className="hero-text-content">
           <p className="cyan-text highlight-caps">STUDENT INNOVATORS FROM NIAT</p>
-          <h1 className="hero-title-main">NovaTech <span className="blue-text">Solutions</span></h1>
+          <h1 className="hero-title-main font-black tracking-tight">
+            Digital <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(56,189,248,0.5)]">Ninjas</span>
+          </h1>
           <h2 className="hero-subtext" style={{ color: 'var(--light-slate)', fontSize: '1.2rem', marginBottom: '1.5rem' }}>
             Building Smart Digital Solutions for Real Businesses
           </h2>

@@ -114,7 +114,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <p className="final-footer">NovaTech Solutions | NIAT Students Initiative | &copy; 2024</p>
+      <p className="final-footer">Digital Ninjas | NIAT Students Initiative | &copy; 2024</p>
     </section>
   );
 };

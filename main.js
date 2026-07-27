@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Console log for senior-dev "signature"
-    console.log('%c NovaTech Solutions ', 'background: #0a192f; color: #64ffda; font-size: 20px; font-weight: bold; padding: 10px; border: 1px solid #64ffda;');
+    console.log('%c Digital Ninjas ', 'background: #0a192f; color: #64ffda; font-size: 20px; font-weight: bold; padding: 10px; border: 1px solid #64ffda;');
     console.log('Premium Brochure Engine Initialized. Pixel-perfect layout confirmed.');
 });
 

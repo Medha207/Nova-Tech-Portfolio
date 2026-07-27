@@ -19,9 +19,16 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <div className="logo">
-          <i className="fas fa-layer-group logo-icon" style={{ color: 'var(--blue-bright)', fontSize: '2rem' }}></i>
-          <span className="logo-text">NovaTech <span className="solutions">SOLUTIONS</span></span>
+        <div className="logo cursor-pointer" onClick={(e) => handleLinkClick(e, '#cover')}>
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-indigo-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400 shadow-[0_0_18px_rgba(6,182,212,0.4)] transition-transform duration-300 hover:scale-105">
+            <i className="fa-solid fa-user-ninja text-xl text-cyan-400"></i>
+          </div>
+          <span className="logo-text text-xl md:text-2xl font-black tracking-tight text-white flex items-center gap-1.5 font-['Outfit']">
+            <span className="text-white font-extrabold">Digital</span>
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-400 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(56,189,248,0.4)] font-black uppercase tracking-wider">
+              Ninjas
+            </span>
+          </span>
         </div>
 
         <button
